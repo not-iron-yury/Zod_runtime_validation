@@ -1,12 +1,10 @@
-import { UsersArraySchema } from '../schemas/user.schema.js';
+import { User, UsersArraySchema } from '../schemas/user.schema.js';
 import { getAgeRange } from '../utils/getAgeRange.js';
 
 export function groupByAgeRange(input: unknown) {
-  const users = UsersArraySchema.parse(input); // zod - валидация
+  const users = UsersArraySchema.parse(input); // zod-валидация
 
-  type AgeRange = ReturnType<typeof getAgeRange>;
-
-  const res: Record<AgeRange, typeof users> = {
+  const res: Record<string, User[]> = {
     '0-17': [],
     '18-25': [],
     '26-35': [],
