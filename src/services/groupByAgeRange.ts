@@ -1,5 +1,5 @@
-import { UsersArraySchema } from '../schemas/user.schema';
-import { getAgeRange } from '../utils/getAgeRange';
+import { UsersArraySchema } from '../schemas/user.schema.js';
+import { getAgeRange } from '../utils/getAgeRange.js';
 
 export function groupByAgeRange(input: unknown) {
   const users = UsersArraySchema.parse(input); // zod - валидация

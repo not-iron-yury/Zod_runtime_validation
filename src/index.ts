@@ -1,4 +1,4 @@
-import { groupByAgeRange } from './services/groupByAgeRange';
+import { groupByAgeRange } from './services/groupByAgeRange.js';
 
 const data = [
   { name: 'Alice', age: 17 },
